@@ -1,0 +1,72 @@
+<configs>
+    
+    <!-- Add General Survival Perk branch with level 1 requirement  -->
+    <append xpath="/progression/attributes">
+        <attribute name="attsurvival" name_key="attSurvivalName" desc_key="attSurvivalDesc" icon="ui_game_symbol_resource">
+            <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+            <effect_group>
+                <effect_description level="1"  desc_key="attSurvivalRank01Desc" long_desc_key="attSurvivalRank01LongDesc"/>
+            </effect_group>
+        </attribute>
+    </append>
+
+    <!-- Add Tree Categories in General Survival Perk branch -->
+    <append xpath="/progression/skills">
+        <skill name="skillSurvivalGeneral" parent="attsurvival" name_key="skillSurvivalGeneralName" icon="ui_game_symbol_book"><effect_group/></skill>
+        <skill name="skillSurvivalScavenging" parent="attsurvival" name_key="skillSurvivalScavengingName" icon="ui_game_symbol_hand"><effect_group/></skill>
+        <skill name="skillSurvivalSurvival" parent="attsurvival" name_key="skillSurvivalSurvivalName" icon="ui_game_symbol_survival"><effect_group/></skill>
+    </append>
+
+    <!-- ======================================================================================================================================== -->
+    <!-- Add Perks to General Survival Perk Branch and update values -->
+
+    <!-- LockPicking -->
+    <set xpath="/progression/perks/perk[@name='perkLockPicking']/@parent">skillSurvivalScavenging</set>
+    <set xpath="/progression/perks/perk[@name='perkLockPicking']/@icon">ui_game_symbol_unlock</set>
+    <set xpath="/progression/perks/perk[@name='perkLockPicking']/level_requirements/requirement/@progression_name">attsurvival</set>
+    <set xpath="/progression/perks/perk[@name='perkLockPicking']/level_requirements/requirement/@value">1</set>
+    <set xpath="/progression/perks/perk[@name='perkLockPicking']/level_requirements/requirement/@desc_key">reqSurvivalLevel01</set>
+   
+    <set xpath="/progression/perks/perk[@name='perkLockPicking']/effect_group/effect_description[@level='1']/@long_desc_key">perkLockPickingRank1LongDescVPU</set>
+    <set xpath="/progression/perks/perk[@name='perkLockPicking']/effect_group/effect_description[@level='2']/@long_desc_key">perkLockPickingRank2LongDescVPU</set>
+    <set xpath="/progression/perks/perk[@name='perkLockPicking']/effect_group/effect_description[@level='3']/@long_desc_key">perkLockPickingRank3LongDescVPU</set>
+
+    <!-- LuckyLooter -->
+    <set xpath="/progression/perks/perk[@name='perkLuckyLooter']/@parent">skillSurvivalScavenging</set>
+    <set xpath="/progression/perks/perk[@name='perkLuckyLooter']/@icon">ui_game_symbol_shopping_cart</set>
+    <set xpath="/progression/perks/perk[@name='perkLuckyLooter']/level_requirements/requirement/@progression_name">attsurvival</set>
+    <set xpath="/progression/perks/perk[@name='perkLuckyLooter']/level_requirements/requirement/@value">1</set>
+    <set xpath="/progression/perks/perk[@name='perkLuckyLooter']/level_requirements/requirement/@desc_key">reqSurvivalLevel01</set>
+
+    <!-- SalvageOperations -->
+    <set xpath="/progression/perks/perk[@name='perkSalvageOperations']/@parent">skillSurvivalScavenging</set>
+    <set xpath="/progression/perks/perk[@name='perkSalvageOperations']/@icon">ui_game_symbol_scrap</set>
+    <set xpath="/progression/perks/perk[@name='perkSalvageOperations']/level_requirements/requirement/@progression_name">attsurvival</set>
+    <set xpath="/progression/perks/perk[@name='perkSalvageOperations']/level_requirements/requirement/@value">1</set>
+    <set xpath="/progression/perks/perk[@name='perkSalvageOperations']/level_requirements/requirement/@desc_key">reqSurvivalLevel01</set>
+
+    <!-- MasterChef -->
+    <set xpath="/progression/perks/perk[@name='perkMasterChef']/@parent">skillSurvivalGeneral</set>
+    <set xpath="/progression/perks/perk[@name='perkMasterChef']/@icon">ui_game_symbol_spatula</set>
+    <set xpath="/progression/perks/perk[@name='perkMasterChef']/level_requirements/requirement/@progression_name">attsurvival</set>
+    <set xpath="/progression/perks/perk[@name='perkMasterChef']/level_requirements/requirement/@value">1</set>
+    <set xpath="/progression/perks/perk[@name='perkMasterChef']/level_requirements/requirement/@desc_key">reqSurvivalLevel01</set>
+
+    <!-- TheHuntsman -->
+    <set xpath="/progression/perks/perk[@name='perkTheHuntsman']/@parent">skillSurvivalSurvival</set>
+    <set xpath="/progression/perks/perk[@name='perkTheHuntsman']/@icon">ui_game_symbol_archery</set>
+    <set xpath="/progression/perks/perk[@name='perkTheHuntsman']/level_requirements/requirement/@progression_name">attsurvival</set>
+    <set xpath="/progression/perks/perk[@name='perkTheHuntsman']/level_requirements/requirement/@value">1</set>
+    <set xpath="/progression/perks/perk[@name='perkTheHuntsman']/level_requirements/requirement/@desc_key">reqSurvivalLevel01</set>
+
+    <!-- LivingOffTheLand -->
+    <set xpath="/progression/perks/perk[@name='perkLivingOffTheLand']/@parent">skillSurvivalSurvival</set>
+    <set xpath="/progression/perks/perk[@name='perkLivingOffTheLand']/@icon">ui_game_symbol_tree</set>
+    <set xpath="/progression/perks/perk[@name='perkLivingOffTheLand']/level_requirements/requirement/@progression_name">attsurvival</set>
+    <set xpath="/progression/perks/perk[@name='perkLivingOffTheLand']/level_requirements/requirement/@value">1</set>
+    <set xpath="/progression/perks/perk[@name='perkLivingOffTheLand']/level_requirements/requirement/@desc_key">reqSurvivalLevel01</set>
+
+    <!-- ======================================================================================================================================== -->
+    <!-- Update existing Perks in current locations -->
+
+</configs>

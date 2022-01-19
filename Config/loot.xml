@@ -1,0 +1,8 @@
+<configs>
+    
+    <!-- Add Acid Schematic to T1 loot table -->
+    <append xpath="/lootcontainers/lootgroup[@name='schematicsToolsT1']">
+        <item name="resourceAcidVPUSchematic" />
+    </append>
+
+</configs>

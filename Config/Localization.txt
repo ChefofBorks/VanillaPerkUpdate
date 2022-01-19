@@ -1,0 +1,11 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+{my_key},{xml_file},{type_of_object},{true/false/null},{true/false/null},"{Localized_Name_Eng}"
+attsurvival,progression,attribute,,,"Survival"
+attSurvivalName,progression,attribute,,,"Attribute: Survival"
+attSurvivalDesc,progression,attribute,,,"Survival is the measure of your ability to basically not die through your own ineptitude, well done!"
+reqSurvivalLevel01,progression,attribute,,,"Survival Level 1"
+attSurvivalRank01Desc,progression,attribute,,,"Average"
+attSurvivalRank01LongDesc,progression,attribute,,,"Being average is better than being below average. If you have survived this long you must being do something right? RIGHT?"
+skillSurvivalGeneralName,progression,attribute,,,"General Perks"
+skillSurvivalScavengingName,progression,attribute,,,"General Scavenging Perks"
+skillSurvivalSurvivalName,progression,attribute,,,"General Survival Perks"

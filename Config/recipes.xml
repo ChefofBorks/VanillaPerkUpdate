@@ -1,0 +1,17 @@
+<configs>
+    <!-- Add non craftables that should be craftable -->
+    <append xpath="/recipes">
+
+        <!-- Add Acid as a craftable item in the Chemistry station -->
+        <!-- Make Localization reference, add schematic for learnable -->
+        <recipe name="resourceAcid" count="1" craft_area="chemistryStation" tags="learnable,chemStationCrafting" craft_time="90">
+            <ingredient name="carBattery" count="1" />
+            <ingredient name="drinkJarBoiledWater" count="3"/>
+        </recipe>
+
+    </append>
+
+    <!-- ======================================================================================================================================== -->
+    <!-- Update existing recipes -->
+
+</configs>

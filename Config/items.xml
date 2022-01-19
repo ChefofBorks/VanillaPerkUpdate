@@ -1,0 +1,29 @@
+<configs>
+
+    <!-- Update Acid item to be unlockable from schematic -->
+    <insertBefore xpath="/items/item[@name='resourceAcid']/property[@name='HoldType']">
+        <property name="UnlockedBy" value="resourceAcidVPUSchematic"/>
+    </insertBefore>
+    
+    <!-- Update Acid item property Group value -->
+    <set xpath="/items/item[@name='resourceAcid']/property[@name='Group']/@value">Resources,Chemicals</set>
+
+    <!-- ======================================================================================================================================== -->
+    <!-- Add new items to game -->
+    
+    <append xpath="/items">
+        
+        <!-- Acid Schematic -->
+        <item name="resourceAcidVPUSchematic">
+            <property name="Extends" value="schematicNoQualityRecipeMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="resourceAcid"/>
+            <property name="Unlocks" value="resourceAcid"/>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceAcid" operation="set" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+            </effect_group>
+        </item>
+
+    </append>
+</configs>
